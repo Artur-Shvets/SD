@@ -1,0 +1,704 @@
+[
+  {
+    "term": "идол",
+    "forms": [
+      "идол noun:anim:m:v_naz:alt",
+      "  идола noun:anim:m:v_rod:alt",
+      "  идолові noun:anim:m:v_dav:alt",
+      "  идолу noun:anim:m:v_dav:alt",
+      "  идола noun:anim:m:v_zna:alt",
+      "  идолом noun:anim:m:v_oru:alt",
+      "  идолі noun:anim:m:v_mis:alt",
+      "  идолові noun:anim:m:v_mis:alt",
+      "  идолу noun:anim:m:v_mis:alt",
+      "  идоле noun:anim:m:v_kly:alt",
+      "  идоли noun:anim:p:v_naz:alt",
+      "  идолів noun:anim:p:v_rod:alt",
+      "  идолам noun:anim:p:v_dav:alt",
+      "  идолів noun:anim:p:v_zna:alt",
+      "  идоли noun:anim:p:v_zna:rare:alt    # з в/у",
+      "  идолами noun:anim:p:v_oru:alt",
+      "  идолах noun:anim:p:v_mis:alt",
+      "  идоли noun:anim:p:v_kly:alt"
+    ]
+  },
+  {
+    "term": "икавка",
+    "forms": [
+      "икавка noun:inanim:f:v_naz:alt",
+      "  икавки noun:inanim:f:v_rod:alt",
+      "  икавці noun:inanim:f:v_dav:alt",
+      "  икавку noun:inanim:f:v_zna:alt",
+      "  икавкою noun:inanim:f:v_oru:alt",
+      "  икавці noun:inanim:f:v_mis:alt",
+      "  икавко noun:inanim:f:v_kly:alt"
+    ]
+  },
+  {
+    "term": "икавши",
+    "forms": [
+      "икавши advp:imperf:alt"
+    ]
+  },
+  {
+    "term": "икання",
+    "forms": [
+      "икання noun:inanim:n:v_naz:alt",
+      "  икання noun:inanim:n:v_rod:alt",
+      "  иканню noun:inanim:n:v_dav:alt",
+      "  икання noun:inanim:n:v_zna:alt",
+      "  иканням noun:inanim:n:v_oru:alt",
+      "  иканні noun:inanim:n:v_mis:alt",
+      "  иканню noun:inanim:n:v_mis:alt",
+      "  икання noun:inanim:n:v_kly:alt"
+    ]
+  },
+  {
+    "term": "икати",
+    "forms": [
+      "икати verb:imperf:inf:alt",
+      "  икать verb:imperf:inf:short:alt",
+      "  икай verb:imperf:impr:s:2:alt",
+      "  икаймо verb:imperf:impr:p:1:alt",
+      "  икайте verb:imperf:impr:p:2:alt",
+      "  икаю verb:imperf:pres:s:1:alt",
+      "  икаєш verb:imperf:pres:s:2:alt",
+      "  икає verb:imperf:pres:s:3:alt",
+      "  икаємо verb:imperf:pres:p:1:alt",
+      "  икаєм verb:imperf:pres:p:1:subst:alt",
+      "  икаєте verb:imperf:pres:p:2:alt",
+      "  икають verb:imperf:pres:p:3:alt",
+      "  икатиму verb:imperf:futr:s:1:alt",
+      "  икатимеш verb:imperf:futr:s:2:alt",
+      "  икатиме verb:imperf:futr:s:3:alt",
+      "  икатимем verb:imperf:futr:p:1:alt",
+      "  икатимемо verb:imperf:futr:p:1:alt",
+      "  икатимете verb:imperf:futr:p:2:alt",
+      "  икатимуть verb:imperf:futr:p:3:alt",
+      "  икав verb:imperf:past:m:alt",
+      "  икала verb:imperf:past:f:alt",
+      "  икало verb:imperf:past:n:alt",
+      "  икали verb:imperf:past:p:alt"
+    ]
+  },
+  {
+    "term": "икаючи",
+    "forms": [
+      "икаючи advp:imperf:alt"
+    ]
+  },
+  {
+    "term": "импонуючий",
+    "forms": [
+      "импонуючий adj:m:v_naz:&adjp:actv:imperf:bad",
+      "  импонуючого adj:m:v_rod:&adjp:actv:imperf:bad",
+      "  импонуючому adj:m:v_dav:&adjp:actv:imperf:bad",
+      "  импонуючого adj:m:v_zna:ranim:&adjp:actv:imperf:bad",
+      "  импонуючий adj:m:v_zna:rinanim:&adjp:actv:imperf:bad",
+      "  импонуючим adj:m:v_oru:&adjp:actv:imperf:bad",
+      "  импонуючім adj:m:v_mis:&adjp:actv:imperf:bad",
+      "  импонуючому adj:m:v_mis:&adjp:actv:imperf:bad",
+      "  импонуючий adj:m:v_kly:&adjp:actv:imperf:bad",
+      "  импонуюча adj:f:v_naz:&adjp:actv:imperf:bad",
+      "  импонуючої adj:f:v_rod:&adjp:actv:imperf:bad",
+      "  импонуючій adj:f:v_dav:&adjp:actv:imperf:bad",
+      "  импонуючу adj:f:v_zna:&adjp:actv:imperf:bad",
+      "  импонуючою adj:f:v_oru:&adjp:actv:imperf:bad",
+      "  импонуючій adj:f:v_mis:&adjp:actv:imperf:bad",
+      "  импонуюча adj:f:v_kly:&adjp:actv:imperf:bad",
+      "  импонуюче adj:n:v_naz:&adjp:actv:imperf:bad",
+      "  импонуючого adj:n:v_rod:&adjp:actv:imperf:bad",
+      "  импонуючому adj:n:v_dav:&adjp:actv:imperf:bad",
+      "  импонуюче adj:n:v_zna:&adjp:actv:imperf:bad",
+      "  импонуючим adj:n:v_oru:&adjp:actv:imperf:bad",
+      "  импонуючім adj:n:v_mis:&adjp:actv:imperf:bad",
+      "  импонуючому adj:n:v_mis:&adjp:actv:imperf:bad",
+      "  импонуюче adj:n:v_kly:&adjp:actv:imperf:bad",
+      "  импонуючі adj:p:v_naz:&adjp:actv:imperf:bad",
+      "  импонуючих adj:p:v_rod:&adjp:actv:imperf:bad",
+      "  импонуючим adj:p:v_dav:&adjp:actv:imperf:bad",
+      "  импонуючих adj:p:v_zna:ranim:&adjp:actv:imperf:bad",
+      "  импонуючі adj:p:v_zna:rinanim:&adjp:actv:imperf:bad",
+      "  импонуючими adj:p:v_oru:&adjp:actv:imperf:bad",
+      "  импонуючих adj:p:v_mis:&adjp:actv:imperf:bad",
+      "  импонуючі adj:p:v_kly:&adjp:actv:imperf:bad"
+    ]
+  },
+  {
+    "term": "Ин",
+    "forms": [
+      "Ин noun:anim:m:v_naz:prop:fname    # Кім Чен Ин",
+      "  Ина noun:anim:m:v_rod:prop:fname",
+      "  Инові noun:anim:m:v_dav:prop:fname",
+      "  Ину noun:anim:m:v_dav:prop:fname",
+      "  Ина noun:anim:m:v_zna:prop:fname",
+      "  Ином noun:anim:m:v_oru:prop:fname",
+      "  Ині noun:anim:m:v_mis:prop:fname",
+      "  Инові noun:anim:m:v_mis:prop:fname",
+      "  Ину noun:anim:m:v_mis:prop:fname",
+      "  Ине noun:anim:m:v_kly:prop:fname"
+    ]
+  },
+  {
+    "term": "инакодумець",
+    "forms": [
+      "инакодумець noun:anim:m:v_naz:alt",
+      "  инакодумця noun:anim:m:v_rod:alt",
+      "  инакодумцеві noun:anim:m:v_dav:alt",
+      "  инакодумцю noun:anim:m:v_dav:alt",
+      "  инакодумця noun:anim:m:v_zna:alt",
+      "  инакодумцем noun:anim:m:v_oru:alt",
+      "  инакодумцеві noun:anim:m:v_mis:alt",
+      "  инакодумці noun:anim:m:v_mis:alt",
+      "  инакодумцю noun:anim:m:v_mis:alt",
+      "  инакодумцю noun:anim:m:v_kly:alt",
+      "  инакодумці noun:anim:p:v_naz:alt",
+      "  инакодумців noun:anim:p:v_rod:alt",
+      "  инакодумцям noun:anim:p:v_dav:alt",
+      "  инакодумців noun:anim:p:v_zna:alt",
+      "  инакодумці noun:anim:p:v_zna:rare:alt    # з в/у",
+      "  инакодумцями noun:anim:p:v_oru:alt",
+      "  инакодумцях noun:anim:p:v_mis:alt",
+      "  инакодумці noun:anim:p:v_kly:alt"
+    ]
+  },
+  {
+    "term": "инакше",
+    "forms": [
+      "инакше adv:alt"
+    ]
+  },
+  {
+    "term": "инакший",
+    "forms": [
+      "инакший adj:m:v_naz:alt",
+      "  инакшого adj:m:v_rod:alt",
+      "  инакшому adj:m:v_dav:alt",
+      "  инакшого adj:m:v_zna:ranim:alt",
+      "  инакший adj:m:v_zna:rinanim:alt",
+      "  инакшим adj:m:v_oru:alt",
+      "  инакшім adj:m:v_mis:alt",
+      "  инакшому adj:m:v_mis:alt",
+      "  инакший adj:m:v_kly:alt",
+      "  инакша adj:f:v_naz:alt",
+      "  инакшої adj:f:v_rod:alt",
+      "  инакшій adj:f:v_dav:alt",
+      "  инакшу adj:f:v_zna:alt",
+      "  инакшою adj:f:v_oru:alt",
+      "  инакшій adj:f:v_mis:alt",
+      "  инакша adj:f:v_kly:alt",
+      "  инакше adj:n:v_naz:alt",
+      "  инакшого adj:n:v_rod:alt",
+      "  инакшому adj:n:v_dav:alt",
+      "  инакше adj:n:v_zna:alt",
+      "  инакшим adj:n:v_oru:alt",
+      "  инакшім adj:n:v_mis:alt",
+      "  инакшому adj:n:v_mis:alt",
+      "  инакше adj:n:v_kly:alt",
+      "  инакші adj:p:v_naz:alt",
+      "  инакших adj:p:v_rod:alt",
+      "  инакшим adj:p:v_dav:alt",
+      "  инакших adj:p:v_zna:ranim:alt",
+      "  инакші adj:p:v_zna:rinanim:alt",
+      "  инакшими adj:p:v_oru:alt",
+      "  инакших adj:p:v_mis:alt",
+      "  инакші adj:p:v_kly:alt"
+    ]
+  },
+  {
+    "term": "инде",
+    "forms": [
+      "инде adv:alt"
+    ]
+  },
+  {
+    "term": "индик",
+    "forms": [
+      "индик noun:anim:m:v_naz:alt",
+      "  индика noun:anim:m:v_rod:alt",
+      "  индикові noun:anim:m:v_dav:alt",
+      "  индику noun:anim:m:v_dav:alt",
+      "  индика noun:anim:m:v_zna:alt",
+      "  индиком noun:anim:m:v_oru:alt",
+      "  индикові noun:anim:m:v_mis:alt",
+      "  индику noun:anim:m:v_mis:alt",
+      "  индиче noun:anim:m:v_kly:alt",
+      "  индики noun:anim:p:v_naz:alt",
+      "  индиків noun:anim:p:v_rod:alt",
+      "  индикам noun:anim:p:v_dav:alt",
+      "  индики noun:anim:p:v_zna:alt",
+      "  индиків noun:anim:p:v_zna:alt",
+      "  индиками noun:anim:p:v_oru:alt",
+      "  индиках noun:anim:p:v_mis:alt",
+      "  индики noun:anim:p:v_kly:alt"
+    ]
+  },
+  {
+    "term": "индичка",
+    "forms": [
+      "индичка noun:anim:f:v_naz:alt",
+      "  индички noun:anim:f:v_rod:alt",
+      "  индичці noun:anim:f:v_dav:alt",
+      "  индичку noun:anim:f:v_zna:alt",
+      "  индичкою noun:anim:f:v_oru:alt",
+      "  индичці noun:anim:f:v_mis:alt",
+      "  индичко noun:anim:f:v_kly:alt",
+      "  индички noun:anim:p:v_naz:alt",
+      "  индичок noun:anim:p:v_rod:alt",
+      "  индичкам noun:anim:p:v_dav:alt",
+      "  индички noun:anim:p:v_zna:alt",
+      "  индичок noun:anim:p:v_zna:alt",
+      "  индичками noun:anim:p:v_oru:alt",
+      "  индичках noun:anim:p:v_mis:alt",
+      "  индички noun:anim:p:v_kly:alt"
+    ]
+  },
+  {
+    "term": "иній",
+    "forms": [
+      "иній noun:inanim:m:v_naz:alt",
+      "  инею noun:inanim:m:v_rod:alt",
+      "  инеєві noun:inanim:m:v_dav:alt",
+      "  инею noun:inanim:m:v_dav:alt",
+      "  иній noun:inanim:m:v_zna:alt",
+      "  инеєм noun:inanim:m:v_oru:alt",
+      "  инеєві noun:inanim:m:v_mis:alt",
+      "  инеї noun:inanim:m:v_mis:alt",
+      "  инею noun:inanim:m:v_mis:alt",
+      "  инею noun:inanim:m:v_kly:alt"
+    ]
+  },
+  {
+    "term": "инколи",
+    "forms": [
+      "инколи adv:alt"
+    ]
+  },
+  {
+    "term": "иноді",
+    "forms": [
+      "иноді adv:alt"
+    ]
+  },
+  {
+    "term": "инокуючий",
+    "forms": [
+      "инокуючий adj:m:v_naz:&adjp:actv:imperf:bad",
+      "  инокуючого adj:m:v_rod:&adjp:actv:imperf:bad",
+      "  инокуючому adj:m:v_dav:&adjp:actv:imperf:bad",
+      "  инокуючого adj:m:v_zna:ranim:&adjp:actv:imperf:bad",
+      "  инокуючий adj:m:v_zna:rinanim:&adjp:actv:imperf:bad",
+      "  инокуючим adj:m:v_oru:&adjp:actv:imperf:bad",
+      "  инокуючім adj:m:v_mis:&adjp:actv:imperf:bad",
+      "  инокуючому adj:m:v_mis:&adjp:actv:imperf:bad",
+      "  инокуючий adj:m:v_kly:&adjp:actv:imperf:bad",
+      "  инокуюча adj:f:v_naz:&adjp:actv:imperf:bad",
+      "  инокуючої adj:f:v_rod:&adjp:actv:imperf:bad",
+      "  инокуючій adj:f:v_dav:&adjp:actv:imperf:bad",
+      "  инокуючу adj:f:v_zna:&adjp:actv:imperf:bad",
+      "  инокуючою adj:f:v_oru:&adjp:actv:imperf:bad",
+      "  инокуючій adj:f:v_mis:&adjp:actv:imperf:bad",
+      "  инокуюча adj:f:v_kly:&adjp:actv:imperf:bad",
+      "  инокуюче adj:n:v_naz:&adjp:actv:imperf:bad",
+      "  инокуючого adj:n:v_rod:&adjp:actv:imperf:bad",
+      "  инокуючому adj:n:v_dav:&adjp:actv:imperf:bad",
+      "  инокуюче adj:n:v_zna:&adjp:actv:imperf:bad",
+      "  инокуючим adj:n:v_oru:&adjp:actv:imperf:bad",
+      "  инокуючім adj:n:v_mis:&adjp:actv:imperf:bad",
+      "  инокуючому adj:n:v_mis:&adjp:actv:imperf:bad",
+      "  инокуюче adj:n:v_kly:&adjp:actv:imperf:bad",
+      "  инокуючі adj:p:v_naz:&adjp:actv:imperf:bad",
+      "  инокуючих adj:p:v_rod:&adjp:actv:imperf:bad",
+      "  инокуючим adj:p:v_dav:&adjp:actv:imperf:bad",
+      "  инокуючих adj:p:v_zna:ranim:&adjp:actv:imperf:bad",
+      "  инокуючі adj:p:v_zna:rinanim:&adjp:actv:imperf:bad",
+      "  инокуючими adj:p:v_oru:&adjp:actv:imperf:bad",
+      "  инокуючих adj:p:v_mis:&adjp:actv:imperf:bad",
+      "  инокуючі adj:p:v_kly:&adjp:actv:imperf:bad"
+    ]
+  },
+  {
+    "term": "инопланетянин",
+    "forms": [
+      "инопланетянин noun:anim:m:v_naz:alt",
+      "  инопланетянина noun:anim:m:v_rod:alt",
+      "  инопланетянинові noun:anim:m:v_dav:alt",
+      "  инопланетянину noun:anim:m:v_dav:alt",
+      "  инопланетянина noun:anim:m:v_zna:alt",
+      "  инопланетянином noun:anim:m:v_oru:alt",
+      "  инопланетянині noun:anim:m:v_mis:alt",
+      "  инопланетянинові noun:anim:m:v_mis:alt",
+      "  инопланетянину noun:anim:m:v_mis:alt",
+      "  инопланетянине noun:anim:m:v_kly:alt",
+      "  инопланетяни noun:anim:p:v_naz:alt",
+      "  инопланетян noun:anim:p:v_rod:alt",
+      "  инопланетянам noun:anim:p:v_dav:alt",
+      "  инопланетян noun:anim:p:v_zna:alt",
+      "  инопланетяни noun:anim:p:v_zna:rare:alt    # з в/у",
+      "  инопланетянами noun:anim:p:v_oru:alt",
+      "  инопланетянах noun:anim:p:v_mis:alt",
+      "  инопланетяни noun:anim:p:v_kly:alt"
+    ]
+  },
+  {
+    "term": "инородець",
+    "forms": [
+      "инородець noun:anim:m:v_naz:alt",
+      "  инородця noun:anim:m:v_rod:alt",
+      "  инородцеві noun:anim:m:v_dav:alt",
+      "  инородцю noun:anim:m:v_dav:alt",
+      "  инородця noun:anim:m:v_zna:alt",
+      "  инородцем noun:anim:m:v_oru:alt",
+      "  инородцеві noun:anim:m:v_mis:alt",
+      "  инородці noun:anim:m:v_mis:alt",
+      "  инородцю noun:anim:m:v_mis:alt",
+      "  инородцю noun:anim:m:v_kly:alt",
+      "  инородці noun:anim:p:v_naz:alt",
+      "  инородців noun:anim:p:v_rod:alt",
+      "  инородцям noun:anim:p:v_dav:alt",
+      "  инородців noun:anim:p:v_zna:alt",
+      "  инородці noun:anim:p:v_zna:rare:alt    # з в/у",
+      "  инородцями noun:anim:p:v_oru:alt",
+      "  инородцях noun:anim:p:v_mis:alt",
+      "  инородці noun:anim:p:v_kly:alt"
+    ]
+  },
+  {
+    "term": "интерпеляція",
+    "forms": [
+      "интерпеляція noun:inanim:f:v_naz:arch",
+      "  интерпеляції noun:inanim:f:v_rod:arch",
+      "  интерпеляції noun:inanim:f:v_dav:arch",
+      "  интерпеляцію noun:inanim:f:v_zna:arch",
+      "  интерпеляцією noun:inanim:f:v_oru:arch",
+      "  интерпеляції noun:inanim:f:v_mis:arch",
+      "  интерпеляціє noun:inanim:f:v_kly:arch"
+    ]
+  },
+  {
+    "term": "инчий",
+    "forms": [
+      "инчий adj:m:v_naz:&pron:def:arch",
+      "  инчого adj:m:v_rod:&pron:def:arch",
+      "  инчому adj:m:v_dav:&pron:def:arch",
+      "  инчого adj:m:v_zna:ranim:&pron:def:arch",
+      "  инчий adj:m:v_zna:rinanim:&pron:def:arch",
+      "  инчим adj:m:v_oru:&pron:def:arch",
+      "  инчім adj:m:v_mis:&pron:def:arch",
+      "  инчому adj:m:v_mis:&pron:def:arch",
+      "  инча adj:f:v_naz:&pron:def:arch",
+      "  инчої adj:f:v_rod:&pron:def:arch",
+      "  инчій adj:f:v_dav:&pron:def:arch",
+      "  инчу adj:f:v_zna:&pron:def:arch",
+      "  инчою adj:f:v_oru:&pron:def:arch",
+      "  инчій adj:f:v_mis:&pron:def:arch",
+      "  инче adj:n:v_naz:&pron:def:arch",
+      "  инчого adj:n:v_rod:&pron:def:arch",
+      "  инчому adj:n:v_dav:&pron:def:arch",
+      "  инче adj:n:v_zna:&pron:def:arch",
+      "  инчим adj:n:v_oru:&pron:def:arch",
+      "  инчім adj:n:v_mis:&pron:def:arch",
+      "  инчому adj:n:v_mis:&pron:def:arch",
+      "  инчі adj:p:v_naz:&pron:def:arch",
+      "  инчих adj:p:v_rod:&pron:def:arch",
+      "  инчим adj:p:v_dav:&pron:def:arch",
+      "  инчих adj:p:v_zna:ranim:&pron:def:arch",
+      "  инчі adj:p:v_zna:rinanim:&pron:def:arch",
+      "  инчими adj:p:v_oru:&pron:def:arch",
+      "  инчих adj:p:v_mis:&pron:def:arch"
+    ]
+  },
+  {
+    "term": "инший",
+    "forms": [
+      "инший adj:m:v_naz:alt",
+      "  иншого adj:m:v_rod:alt",
+      "  иншому adj:m:v_dav:alt",
+      "  иншого adj:m:v_zna:ranim:alt",
+      "  инший adj:m:v_zna:rinanim:alt",
+      "  иншим adj:m:v_oru:alt",
+      "  иншім adj:m:v_mis:alt",
+      "  иншому adj:m:v_mis:alt",
+      "  инший adj:m:v_kly:alt",
+      "  инша adj:f:v_naz:alt",
+      "  иншої adj:f:v_rod:alt",
+      "  иншій adj:f:v_dav:alt",
+      "  иншу adj:f:v_zna:alt",
+      "  иншою adj:f:v_oru:alt",
+      "  иншій adj:f:v_mis:alt",
+      "  инша adj:f:v_kly:alt",
+      "  инше adj:n:v_naz:alt",
+      "  иншого adj:n:v_rod:alt",
+      "  иншому adj:n:v_dav:alt",
+      "  инше adj:n:v_zna:alt",
+      "  иншим adj:n:v_oru:alt",
+      "  иншім adj:n:v_mis:alt",
+      "  иншому adj:n:v_mis:alt",
+      "  инше adj:n:v_kly:alt",
+      "  инші adj:p:v_naz:alt",
+      "  инших adj:p:v_rod:alt",
+      "  иншим adj:p:v_dav:alt",
+      "  инших adj:p:v_zna:ranim:alt",
+      "  инші adj:p:v_zna:rinanim:alt",
+      "  иншими adj:p:v_oru:alt",
+      "  инших adj:p:v_mis:alt",
+      "  инші adj:p:v_kly:alt"
+    ]
+  },
+  {
+    "term": "иншомовний",
+    "forms": [
+      "иншомовний adj:m:v_naz:alt",
+      "  иншомовного adj:m:v_rod:alt",
+      "  иншомовному adj:m:v_dav:alt",
+      "  иншомовного adj:m:v_zna:ranim:alt",
+      "  иншомовний adj:m:v_zna:rinanim:alt",
+      "  иншомовним adj:m:v_oru:alt",
+      "  иншомовнім adj:m:v_mis:alt",
+      "  иншомовному adj:m:v_mis:alt",
+      "  иншомовний adj:m:v_kly:alt",
+      "  иншомовна adj:f:v_naz:alt",
+      "  иншомовної adj:f:v_rod:alt",
+      "  иншомовній adj:f:v_dav:alt",
+      "  иншомовну adj:f:v_zna:alt",
+      "  иншомовною adj:f:v_oru:alt",
+      "  иншомовній adj:f:v_mis:alt",
+      "  иншомовна adj:f:v_kly:alt",
+      "  иншомовне adj:n:v_naz:alt",
+      "  иншомовного adj:n:v_rod:alt",
+      "  иншомовному adj:n:v_dav:alt",
+      "  иншомовне adj:n:v_zna:alt",
+      "  иншомовним adj:n:v_oru:alt",
+      "  иншомовнім adj:n:v_mis:alt",
+      "  иншомовному adj:n:v_mis:alt",
+      "  иншомовне adj:n:v_kly:alt",
+      "  иншомовні adj:p:v_naz:alt",
+      "  иншомовних adj:p:v_rod:alt",
+      "  иншомовним adj:p:v_dav:alt",
+      "  иншомовних adj:p:v_zna:ranim:alt",
+      "  иншомовні adj:p:v_zna:rinanim:alt",
+      "  иншомовними adj:p:v_oru:alt",
+      "  иншомовних adj:p:v_mis:alt",
+      "  иншомовні adj:p:v_kly:alt"
+    ]
+  },
+  {
+    "term": "иньший",
+    "forms": [
+      "иньший adj:m:v_naz:&pron:def:arch",
+      "  иньшого adj:m:v_rod:&pron:def:arch",
+      "  иньшому adj:m:v_dav:&pron:def:arch",
+      "  иньшого adj:m:v_zna:ranim:&pron:def:arch",
+      "  иньший adj:m:v_zna:rinanim:&pron:def:arch",
+      "  иньшим adj:m:v_oru:&pron:def:arch",
+      "  иньшім adj:m:v_mis:&pron:def:arch",
+      "  иньшому adj:m:v_mis:&pron:def:arch",
+      "  иньша adj:f:v_naz:&pron:def:arch",
+      "  иньшої adj:f:v_rod:&pron:def:arch",
+      "  иньшій adj:f:v_dav:&pron:def:arch",
+      "  иньшу adj:f:v_zna:&pron:def:arch",
+      "  иньшою adj:f:v_oru:&pron:def:arch",
+      "  иньшій adj:f:v_mis:&pron:def:arch",
+      "  иньше adj:n:v_naz:&pron:def:arch",
+      "  иньшого adj:n:v_rod:&pron:def:arch",
+      "  иньшому adj:n:v_dav:&pron:def:arch",
+      "  иньше adj:n:v_zna:&pron:def:arch",
+      "  иньшим adj:n:v_oru:&pron:def:arch",
+      "  иньшім adj:n:v_mis:&pron:def:arch",
+      "  иньшому adj:n:v_mis:&pron:def:arch",
+      "  иньші adj:p:v_naz:&pron:def:arch",
+      "  иньших adj:p:v_rod:&pron:def:arch",
+      "  иньшим adj:p:v_dav:&pron:def:arch",
+      "  иньших adj:p:v_zna:ranim:&pron:def:arch",
+      "  иньші adj:p:v_zna:rinanim:&pron:def:arch",
+      "  иньшими adj:p:v_oru:&pron:def:arch",
+      "  иньших adj:p:v_mis:&pron:def:arch"
+    ]
+  },
+  {
+    "term": "иржа",
+    "forms": [
+      "иржа noun:inanim:f:v_naz:alt",
+      "  иржі noun:inanim:f:v_rod:alt",
+      "  иржі noun:inanim:f:v_dav:alt",
+      "  иржу noun:inanim:f:v_zna:alt",
+      "  иржею noun:inanim:f:v_oru:alt",
+      "  иржі noun:inanim:f:v_mis:alt",
+      "  ирже noun:inanim:f:v_kly:alt"
+    ]
+  },
+  {
+    "term": "иржавівши",
+    "forms": [
+      "иржавівши advp:imperf:alt"
+    ]
+  },
+  {
+    "term": "иржавіти",
+    "forms": [
+      "иржавіти verb:imperf:inf:alt",
+      "  иржавіть verb:imperf:inf:short:alt",
+      "  иржавій verb:imperf:impr:s:2:alt",
+      "  иржавіймо verb:imperf:impr:p:1:alt",
+      "  иржавійте verb:imperf:impr:p:2:alt",
+      "  иржавію verb:imperf:pres:s:1:alt",
+      "  иржавієш verb:imperf:pres:s:2:alt",
+      "  иржавіє verb:imperf:pres:s:3:alt",
+      "  иржавіємо verb:imperf:pres:p:1:alt",
+      "  иржавієм verb:imperf:pres:p:1:subst:alt",
+      "  иржавієте verb:imperf:pres:p:2:alt",
+      "  иржавіють verb:imperf:pres:p:3:alt",
+      "  иржавітиму verb:imperf:futr:s:1:alt",
+      "  иржавітимеш verb:imperf:futr:s:2:alt",
+      "  иржавітиме verb:imperf:futr:s:3:alt",
+      "  иржавітимем verb:imperf:futr:p:1:alt",
+      "  иржавітимемо verb:imperf:futr:p:1:alt",
+      "  иржавітимете verb:imperf:futr:p:2:alt",
+      "  иржавітимуть verb:imperf:futr:p:3:alt",
+      "  иржавів verb:imperf:past:m:alt",
+      "  иржавіла verb:imperf:past:f:alt",
+      "  иржавіло verb:imperf:past:n:alt",
+      "  иржавіли verb:imperf:past:p:alt"
+    ]
+  },
+  {
+    "term": "иржавіючи",
+    "forms": [
+      "иржавіючи advp:imperf:alt"
+    ]
+  },
+  {
+    "term": "иржавши",
+    "forms": [
+      "иржавши advp:imperf:alt"
+    ]
+  },
+  {
+    "term": "иржати",
+    "forms": [
+      "иржати verb:imperf:inf:alt    # rv_oru",
+      "  иржать verb:imperf:inf:short:alt",
+      "  иржи verb:imperf:impr:s:2:alt",
+      "  иржім verb:imperf:impr:p:1:alt",
+      "  иржімо verb:imperf:impr:p:1:alt",
+      "  иржіть verb:imperf:impr:p:2:alt",
+      "  иржу verb:imperf:pres:s:1:alt",
+      "  иржеш verb:imperf:pres:s:2:alt",
+      "  ирже verb:imperf:pres:s:3:alt",
+      "  иржемо verb:imperf:pres:p:1:alt",
+      "  иржем verb:imperf:pres:p:1:subst:alt",
+      "  иржете verb:imperf:pres:p:2:alt",
+      "  иржуть verb:imperf:pres:p:3:alt",
+      "  иржатиму verb:imperf:futr:s:1:alt",
+      "  иржатимеш verb:imperf:futr:s:2:alt",
+      "  иржатиме verb:imperf:futr:s:3:alt",
+      "  иржатимем verb:imperf:futr:p:1:alt",
+      "  иржатимемо verb:imperf:futr:p:1:alt",
+      "  иржатимете verb:imperf:futr:p:2:alt",
+      "  иржатимуть verb:imperf:futr:p:3:alt",
+      "  иржав verb:imperf:past:m:alt",
+      "  иржала verb:imperf:past:f:alt",
+      "  иржало verb:imperf:past:n:alt",
+      "  иржали verb:imperf:past:p:alt"
+    ]
+  },
+  {
+    "term": "иржучи",
+    "forms": [
+      "иржучи advp:imperf:alt"
+    ]
+  },
+  {
+    "term": "ирій",
+    "forms": [
+      "ирій noun:inanim:m:v_naz:ua_2019",
+      "  ирію noun:inanim:m:v_rod:ua_2019",
+      "  ирієві noun:inanim:m:v_dav:ua_2019",
+      "  ирію noun:inanim:m:v_dav:ua_2019",
+      "  ирій noun:inanim:m:v_zna:ua_2019",
+      "  ирієм noun:inanim:m:v_oru:ua_2019",
+      "  ирієві noun:inanim:m:v_mis:ua_2019",
+      "  ирії noun:inanim:m:v_mis:ua_2019",
+      "  ирію noun:inanim:m:v_mis:ua_2019",
+      "  ирію noun:inanim:m:v_kly:ua_2019"
+    ]
+  },
+  {
+    "term": "ирод",
+    "forms": [
+      "ирод noun:anim:m:v_naz:ua_2019",
+      "  ирода noun:anim:m:v_rod:ua_2019",
+      "  иродові noun:anim:m:v_dav:ua_2019",
+      "  ироду noun:anim:m:v_dav:ua_2019",
+      "  ирода noun:anim:m:v_zna:ua_2019",
+      "  иродом noun:anim:m:v_oru:ua_2019",
+      "  ироді noun:anim:m:v_mis:ua_2019",
+      "  иродові noun:anim:m:v_mis:ua_2019",
+      "  ироду noun:anim:m:v_mis:ua_2019",
+      "  ироде noun:anim:m:v_kly:ua_2019",
+      "  ироди noun:anim:p:v_naz:ua_2019",
+      "  иродів noun:anim:p:v_rod:ua_2019",
+      "  иродам noun:anim:p:v_dav:ua_2019",
+      "  иродів noun:anim:p:v_zna:ua_2019",
+      "  ироди noun:anim:p:v_zna:ua_2019:rare    # з в/у",
+      "  иродами noun:anim:p:v_oru:ua_2019",
+      "  иродах noun:anim:p:v_mis:ua_2019",
+      "  ироди noun:anim:p:v_kly:ua_2019"
+    ]
+  },
+  {
+    "term": "истнуючий",
+    "forms": [
+      "истнуючий adj:m:v_naz:&adjp:actv:imperf:bad",
+      "  истнуючого adj:m:v_rod:&adjp:actv:imperf:bad",
+      "  истнуючому adj:m:v_dav:&adjp:actv:imperf:bad",
+      "  истнуючого adj:m:v_zna:ranim:&adjp:actv:imperf:bad",
+      "  истнуючий adj:m:v_zna:rinanim:&adjp:actv:imperf:bad",
+      "  истнуючим adj:m:v_oru:&adjp:actv:imperf:bad",
+      "  истнуючім adj:m:v_mis:&adjp:actv:imperf:bad",
+      "  истнуючому adj:m:v_mis:&adjp:actv:imperf:bad",
+      "  истнуючий adj:m:v_kly:&adjp:actv:imperf:bad",
+      "  истнуюча adj:f:v_naz:&adjp:actv:imperf:bad",
+      "  истнуючої adj:f:v_rod:&adjp:actv:imperf:bad",
+      "  истнуючій adj:f:v_dav:&adjp:actv:imperf:bad",
+      "  истнуючу adj:f:v_zna:&adjp:actv:imperf:bad",
+      "  истнуючою adj:f:v_oru:&adjp:actv:imperf:bad",
+      "  истнуючій adj:f:v_mis:&adjp:actv:imperf:bad",
+      "  истнуюча adj:f:v_kly:&adjp:actv:imperf:bad",
+      "  истнуюче adj:n:v_naz:&adjp:actv:imperf:bad",
+      "  истнуючого adj:n:v_rod:&adjp:actv:imperf:bad",
+      "  истнуючому adj:n:v_dav:&adjp:actv:imperf:bad",
+      "  истнуюче adj:n:v_zna:&adjp:actv:imperf:bad",
+      "  истнуючим adj:n:v_oru:&adjp:actv:imperf:bad",
+      "  истнуючім adj:n:v_mis:&adjp:actv:imperf:bad",
+      "  истнуючому adj:n:v_mis:&adjp:actv:imperf:bad",
+      "  истнуюче adj:n:v_kly:&adjp:actv:imperf:bad",
+      "  истнуючі adj:p:v_naz:&adjp:actv:imperf:bad",
+      "  истнуючих adj:p:v_rod:&adjp:actv:imperf:bad",
+      "  истнуючим adj:p:v_dav:&adjp:actv:imperf:bad",
+      "  истнуючих adj:p:v_zna:ranim:&adjp:actv:imperf:bad",
+      "  истнуючі adj:p:v_zna:rinanim:&adjp:actv:imperf:bad",
+      "  истнуючими adj:p:v_oru:&adjp:actv:imperf:bad",
+      "  истнуючих adj:p:v_mis:&adjp:actv:imperf:bad",
+      "  истнуючі adj:p:v_kly:&adjp:actv:imperf:bad"
+    ]
+  },
+  {
+    "term": "ит",
+    "forms": [
+      "ит intj"
+    ]
+  },
+  {
+    "term": "ич",
+    "forms": [
+      "ич intj"
+    ]
+  },
+  {
+    "term": "ич",
+    "forms": [
+      "ич part"
+    ]
+  }
+]
