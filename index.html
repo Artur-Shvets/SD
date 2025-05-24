@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Пошук по Словнику</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f0f2f5;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .container {
+        background-color: #fff;
+        padding: 20px 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 800px;
+        box-sizing: border-box;
+      }
+
+      h1 {
+        color: #0056b3; /* Темно-синій */
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 2em;
+      }
+
+      .search-controls {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 25px;
+        align-items: center;
+      }
+
+      #searchInput {
+        flex-grow: 1;
+        padding: 12px 15px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 16px;
+        outline: none;
+        transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+      }
+
+      #searchInput:focus {
+        border-color: #007bff; /* Яскраво-синій */
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      }
+
+      #searchButton {
+        padding: 12px 20px;
+        background-color: #007bff; /* Яскраво-синій */
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.2s ease-in-out;
+      }
+
+      #searchButton:hover {
+        background-color: #0056b3; /* Темно-синій */
+      }
+
+      #searchType {
+        padding: 12px 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 16px;
+        background-color: #fff;
+      }
+
+      #statusMessage {
+        text-align: center;
+        margin-bottom: 20px;
+        font-style: italic;
+        color: #555;
+      }
+
+      .results-container {
+        margin-top: 20px;
+        border-top: 1px solid #eee;
+        padding-top: 20px;
+      }
+
+      .entry {
+        background-color: #f9f9f9;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 15px;
+        margin-bottom: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+
+      .entry-term {
+        font-weight: bold;
+        font-size: 1.3em;
+        color: #2c3e50; /* Темно-сіро-синій */
+        margin-bottom: 8px;
+      }
+
+      .entry-forms {
+        margin-left: 0; /* Змінено з 20px */
+        padding-left: 0; /* Змінено з 20px */
+        list-style-type: none; /* Забираємо маркери списку */
+      }
+
+      .entry-forms li {
+        font-family: "Courier New", Courier, monospace; /* Моноширинний шрифт для форм */
+        font-size: 0.95em;
+        color: #444;
+        padding: 3px 0;
+        white-space: pre-wrap; /* Збереження відступів та переносів */
+        line-height: 1.4;
+        cursor: pointer;
+      }
+
+      /* Для мобільних пристроїв */
+      @media (max-width: 600px) {
+        .search-controls {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        #searchType {
+          width: 100%;
+        }
+        h1 {
+          font-size: 1.8em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Пошук по Словнику</h1>
+
+      <div class="search-controls">
+        <input type="text" id="searchInput" placeholder="Введіть слово..." />
+        <select id="searchType">
+          <option value="startsWith">Починається з</option>
+          <option value="exact">Точний збіг</option>
+          <option value="contains">Містить (у терміні)</option>
+          <option value="containsInForms">Містить (у формах)</option>
+        </select>
+        <button id="searchButton">Знайти</button>
+      </div>
+
+      <div id="statusMessage">Введіть слово для пошуку.</div>
+      <div id="resultsContainer" class="results-container"></div>
+    </div>
+
+    <script>
+      const searchInput = document.getElementById("searchInput");
+      const searchButton = document.getElementById("searchButton");
+      const searchTypeSelect = document.getElementById("searchType");
+      const resultsContainer = document.getElementById("resultsContainer");
+      const statusMessage = document.getElementById("statusMessage");
+
+      // Мапа для українських літер та відповідних файлів
+      // Ви можете розширити цей список, якщо потрібно
+      const ukrainianAlphabetFiles = {
+        а: "А.json",
+        б: "Б.json",
+        в: "В.json",
+        г: "Г.json",
+        д: "Д.json",
+        е: "Е.json",
+        є: "Є.json",
+        ж: "Ж.json",
+        з: "З.json",
+        и: "И.json",
+        і: "І.json",
+        ї: "Ї.json",
+        й: "Й.json",
+        к: "К.json",
+        л: "Л.json",
+        м: "М.json",
+        н: "Н.json",
+        о: "О.json",
+        п: "П.json",
+        р: "Р.json",
+        с: "С.json",
+        т: "Т.json",
+        у: "У.json",
+        ф: "Ф.json",
+        х: "Х.json",
+        ц: "Ц.json",
+        ч: "Ч.json",
+        ш: "Ш.json",
+        щ: "Щ.json",
+        ь: "Ь.json",
+        ю: "Ю.json",
+        я: "Я.json",
+        // Літера "Ґ" зазвичай потрапляє до OTHER.txt, якщо її не було в LETTERS у скрипті split_vesum.py
+        // Якщо у вас є окремий Ґ.json, додайте його сюди: 'ґ': 'Ґ.json',
+      };
+      const otherFile = "OTHER.json"; // Файл для літери "Ґ", цифр, латиниці та інших символів
+      const dataPath = "./dictionary_data/"; // Шлях до папки з JSON файлами
+
+      let currentDataCache = null; // Кеш для завантажених даних поточного файлу
+      let currentFileNameCache = ""; // Ім'я файлу, дані якого закешовані
+
+      searchButton.addEventListener("click", performSearch);
+      // searchButton.addEventListener("click", performSearch);
+      searchInput.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          performSearch();
+        }
+      });
+
+      async function performSearch() {
+        const searchTermRaw = searchInput.value.trim();
+        if (!searchTermRaw) {
+          statusMessage.textContent = "Будь ласка, введіть слово для пошуку.";
+          resultsContainer.innerHTML = "";
+          return;
+        }
+
+        const searchTerm = searchTermRaw.toLowerCase();
+        statusMessage.textContent = "Пошук...";
+        resultsContainer.innerHTML = "";
+        currentDataCache = null; // Скидаємо кеш при новому пошуку, якщо логіка файлу зміниться
+
+        let fileNameToFetch;
+        const firstChar = searchTerm.charAt(0);
+
+        if (ukrainianAlphabetFiles[firstChar]) {
+          fileNameToFetch = ukrainianAlphabetFiles[firstChar];
+        } else {
+          // Для 'ґ' та інших символів, що не входять до основного алфавіту
+          fileNameToFetch = otherFile;
+        }
+
+        console.log(`Запит на файл: ${dataPath}${fileNameToFetch}`);
+
+        try {
+          // Перевіряємо, чи дані для цього файлу вже в кеші
+          if (currentFileNameCache === fileNameToFetch && currentDataCache) {
+            console.log("Використання даних з кешу.");
+            filterAndDisplayResults(currentDataCache, searchTermRaw);
+          } else {
+            const response = await fetch(dataPath + fileNameToFetch);
+            if (!response.ok) {
+              throw new Error(
+                `Не вдалося завантажити файл: ${fileNameToFetch} (статус: ${response.status})`
+              );
+            }
+            const data = await response.json();
+            currentDataCache = data; // Кешуємо завантажені дані
+            currentFileNameCache = fileNameToFetch; // Зберігаємо ім'я закешованого файлу
+            console.log(`Файл ${fileNameToFetch} успішно завантажено.`);
+            filterAndDisplayResults(data, searchTermRaw);
+          }
+        } catch (error) {
+          console.error("Помилка:", error);
+          statusMessage.textContent = `Помилка: ${error.message}. Перевірте, чи файл '${fileNameToFetch}' існує у папці '${dataPath}'.`;
+          resultsContainer.innerHTML = "";
+        }
+      }
+
+      function filterAndDisplayResults(data, originalSearchTerm) {
+        const searchType = searchTypeSelect.value;
+        const searchTermLower = originalSearchTerm.toLowerCase();
+        let foundEntries = [];
+
+        if (!Array.isArray(data)) {
+          console.error("Завантажені дані не є масивом:", data);
+          statusMessage.textContent =
+            "Помилка: Неправильний формат даних у файлі.";
+          return;
+        }
+
+        foundEntries = data.filter((entry) => {
+          if (!entry || typeof entry.term !== "string") return false; // Перевірка на валідність запису
+          const termLower = entry.term.toLowerCase();
+
+          switch (searchType) {
+            case "startsWith":
+              return termLower.startsWith(searchTermLower);
+            case "exact":
+              return termLower === searchTermLower;
+            case "contains":
+              return termLower.includes(searchTermLower);
+            case "containsInForms":
+              if (termLower.includes(searchTermLower)) return true;
+              if (entry.forms && Array.isArray(entry.forms)) {
+                return entry.forms.some(
+                  (form) =>
+                    typeof form === "string" &&
+                    form.toLowerCase().includes(searchTermLower)
+                );
+              }
+              return false;
+            default:
+              return false;
+          }
+        });
+
+        displayResults(foundEntries, originalSearchTerm);
+      }
+
+      const tagDescriptions = {
+        // Ключ леми
+        "[КЛ]": "Ключ леми", // Спрощено для прикладу, далі детальніше
+
+        // Частини мови
+        noun: "іменник",
+        verb: "дієслово",
+        adj: "прикметник",
+        adv: "прислівник",
+        advp: "дієприслівник",
+        prep: "прийменник",
+        conj: "сполучник",
+        part: "частка",
+        intj: "вигук",
+        numr: "числівник",
+        noninfl: "невідмінювана частина",
+        foreign: "запозичене слово",
+        onomat: "звуконаслідувальне",
+
+        // Ключі для іменника
+        anim: "істота",
+        fname: "ім'я",
+        lname: "прізвище",
+        pname: "по батькові",
+        inanim: "неістота",
+        unanim: "невизначена істота/неістота",
+        prop: "власна назва",
+        geo: "топонім",
+
+        // Ключі для дієслова
+        imperf: "недоконаний вид",
+        perf: "доконаний вид",
+        rev: "зворотна форма",
+        inf: "інфінітив",
+        futr: "майбутній час",
+        past: "минулий час",
+        pres: "теперішній час",
+        impr: "наказовий спосіб",
+        impers: "безособова форма",
+        1: "1 особа",
+        2: "2 особа",
+        3: "3 особа",
+        short: "коротка форма",
+        long: "довга/повна форма",
+
+        // Ключі для прикметника
+        compb: "базова форма порівняння",
+        compc: "вища ступінь порівняння",
+        comps: "найвища ступінь порівняння",
+        adjp: "дієприкметник",
+        actv: "активний стан",
+        pasv: "пасивний стан",
+        // Об'єднаємо складні теги в один ключ, якщо вони завжди йдуть разом
+        "v_zna:rinanim": "знахідний відмінок (неістота)",
+        "v_zna:ranim": "знахідний відмінок (істота)",
+
+        // Ключі для сполучника
+        subord: "підрядний",
+        coord: "сурядний",
+
+        // Відмінки
+        v_naz: "називний",
+        v_rod: "родовий",
+        v_dav: "давальний",
+        v_zna: "знахідний",
+        v_oru: "орудний",
+        v_mis: "місцевий",
+        v_kly: "кличний",
+        nv: "не відмінюється",
+        ns: "лише множина",
+
+        // Число
+        p: "множина",
+        s: "однина",
+
+        // Рід
+        m: "чол. рід",
+        f: "жін. рід",
+        n: "сер. рід",
+
+        // Додаткові теги
+        abbr: "абревіатура",
+        bad: "помилкове",
+        subst: "нестандартне",
+        rare: "рідкісне",
+        coll: "розмовне",
+        arch: "архаїчне",
+        slang: "сленг",
+        alt: "альтернативне написання",
+        vulg: "вульгарне",
+        obsc: "обсценне",
+        ua_1992: "правопис 1992",
+        ua_2019: "правопис 2019",
+        var: "варіативний Зн.В.",
+        // Для :xpN та :xvN потрібна спеціальна логіка або окремі записи, якщо N обмежене
+        ":xp1": "омонім (парадигма 1)",
+        ":xp2": "омонім (парадигма 2)", // і т.д.
+        "v-u": "варіант в-/у-",
+
+        // Класи слів (після &) - обробляємо як звичайні теги, якщо вони окремі
+        "&adjp": "дієприкметник (клас)",
+        "&pron": "займенник (клас)",
+        "&numr": "порядковий числівник (клас)",
+        "&&numr": "імен./кількісний числ.",
+        "&insert": "вставне",
+        "&predic": "предикатив",
+
+        // Теги займенників
+        pers: "особовий",
+        refl: "зворотний",
+        pos: "присвійний",
+        dem: "вказівний",
+        def: "означальний",
+        int: "питальний",
+        rel: "відносний",
+        neg: "заперечний",
+        ind: "неозначений",
+        gen: "узагальнювальний",
+        emph: "підсилювальний",
+
+        // Динамічні теги
+        number: "число",
+        "number:latin": "число (латиниця)",
+        date: "дата",
+        time: "час",
+        hashtag: "хештег",
+        punct: "пунктуація",
+        symb: "символ",
+        unknown: "невідоме",
+        unclass: "іншомовне",
+
+        // Внутрішні
+        ":town": "місто",
+        ":towna": "місто (-а в Р.В.)",
+      };
+
+      /**
+       * Спрощена функція для заміни скорочених тегів на їхні повні розшифровки.
+       * @param {string} tagsString - Рядок тегів, розділених двокрапкою.
+       * @returns {string} - Рядок з розшифрованими тегами, розділеними комою та пробілом.
+       */
+
+      let lastMaxId = 0;
+      function expandTagsSimple(tagsString) {
+        if (!tagsString || typeof tagsString !== "string") {
+          return "Некоректний вхід";
+        }
+
+        // Спершу обробимо спеціальні комбіновані теги, якщо вони є
+        // Це дуже базовий підхід, для складніших випадків потрібен парсер
+        let processedTagsString = tagsString;
+        if (tagsString.includes("v_zna:ranim")) {
+          processedTagsString = processedTagsString.replace(
+            "v_zna:ranim",
+            "TAG_VZNA_RANIM"
+          );
+        } else if (tagsString.includes("v_zna:rinanim")) {
+          processedTagsString = processedTagsString.replace(
+            "v_zna:rinanim",
+            "TAG_VZNA_RINANIM"
+          );
+        }
+        if (tagsString.includes("number:latin")) {
+          processedTagsString = processedTagsString.replace(
+            "number:latin",
+            "TAG_NUM_LATIN"
+          );
+        }
+
+        // Обробка [КЛ] - просто замінюємо його і тег, що йде за ним, якщо він є ключем
+        let keyLemmaDescription = "";
+        if (processedTagsString.includes("[КЛ]")) {
+          keyLemmaDescription = tagDescriptions["[КЛ]"] || "[КЛ]";
+          processedTagsString = processedTagsString.replace(
+            /\[КЛ\]:?(\w+)?/,
+            (match, p1) => {
+              if (p1 && tagDescriptions[p1]) {
+                // Якщо після [КЛ] йде відомий тег ключа леми, не додаємо його окремо
+                return ""; // Видаляємо [КЛ]:ключ
+              }
+              return ""; // Видаляємо просто [КЛ]
+            }
+          );
+          processedTagsString = processedTagsString
+            .replace(/:{2,}/g, ":")
+            .replace(/^:|:$/g, ""); // Очищення
+        }
+
+        const individualTags = processedTagsString
+          .split(":")
+          .filter((tag) => tag.length > 0);
+
+        const expandedDescriptions = individualTags.map((tag) => {
+          if (tag === "TAG_VZNA_RANIM") return tagDescriptions["v_zna:ranim"];
+          if (tag === "TAG_VZNA_RINANIM")
+            return tagDescriptions["v_zna:rinanim"];
+          if (tag === "TAG_NUM_LATIN") return tagDescriptions["number:latin"];
+
+          // Обробка :xpN
+          if (tag.match(/^:xp\d+$/))
+            return (
+              (tagDescriptions[":xp"] || "омонім (парадигма)") +
+              ` (${tag.substring(3)})`
+            );
+
+          return tagDescriptions[tag] || tag; // Якщо розшифровки немає, повертаємо сам тег
+        });
+
+        if (keyLemmaDescription) {
+          expandedDescriptions.unshift(keyLemmaDescription); // Додаємо розшифровку [КЛ] на початок
+        }
+
+        return [...new Set(expandedDescriptions)].join(", "); // Унікальні значення
+      }
+      // ХЗ !!!
+      let prevId;
+      let prevContent;
+      function displayResults(entries, searchTerm) {
+        if (entries.length === 0) {
+          statusMessage.textContent = `За запитом "${searchTerm}" нічого не знайдено.`;
+          return;
+        }
+
+        statusMessage.textContent = `Знайдено ${entries.length} статей за запитом "${searchTerm}":`;
+
+        entries.forEach((entry) => {
+          const entryDiv = document.createElement("div");
+          entryDiv.className = "entry";
+
+          const termP = document.createElement("p");
+          termP.className = "entry-term";
+          termP.textContent = entry.term;
+          entryDiv.appendChild(termP);
+
+          if (entry.forms && Array.isArray(entry.forms)) {
+            const formsUl = document.createElement("ul");
+            formsUl.className = "entry-forms";
+            //li.setAttribute(contenteditable, "false");
+            entry.forms.forEach((formText, index) => {
+              const li = document.createElement("li");
+              // Замінюємо множинні пробіли на нерозривні для збереження форматування
+              // та екрануємо HTML для безпеки (хоча тут дані з JSON)
+              li.innerHTML = formText.replace(/  /g, "&nbsp;&nbsp;");
+              lastMaxId = lastMaxId + index;
+              li.id = `form-${lastMaxId}`;
+
+              li.addEventListener("click", (e) => {
+                e.stopPropagation();
+                //console.log("click", e);
+                if (prevId) {
+                  let prevLi = document.getElementById(prevId);
+                  prevLi.innerHTML = prevContent;
+                  //console.log("prevLi", prevLi);
+                  if (prevLi.id === li.id) {
+                    prevLi.innerHTML = prevContent;
+                    prevId = null;
+                    return;
+                  }
+                }
+                let content = e.target.innerText;
+                prevContent = content;
+                content = content.replace(
+                  /\w*/g,
+                  (match) => match && `\n     ${tagDescriptions[match]} `
+                );
+                e.target.innerHTML = content;
+                prevId = li.id;
+              });
+
+              formsUl.appendChild(li);
+            });
+            entryDiv.appendChild(formsUl);
+          }
+          resultsContainer.appendChild(entryDiv);
+        });
+      }
+    </script>
+  </body>
+</html>
